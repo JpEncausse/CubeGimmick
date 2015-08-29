@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>NG10745</Machine>
+    <WindowsUser>gtarb</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>5b9ee761-44a0-43bb-8ba8-b184354f8ef0</PackageIdentityName>
+    <IntermediateOutputPath>d:\Geddy\Projects\CubeGimmick\CubeGimmick\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="d:\Geddy\Projects\CubeGimmick\CubeGimmick\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="d:\Geddy\Projects\CubeGimmick\CubeGimmick\bin\Debug\CubeGimmick.exe">
+      <PackagePath>CubeGimmick.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\Geddy\Projects\CubeGimmick\CubeGimmick\Assets\Logo.scale-240.png">
+      <PackagePath>Assets\Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\Geddy\Projects\CubeGimmick\CubeGimmick\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\Geddy\Projects\CubeGimmick\CubeGimmick\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\Geddy\Projects\CubeGimmick\CubeGimmick\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\Geddy\Projects\CubeGimmick\CubeGimmick\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\Geddy\Projects\CubeGimmick\CubeGimmick\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\Geddy\Projects\CubeGimmick\CubeGimmick\bin\Debug\CubeGimmick.xr.xml">
+      <PackagePath>CubeGimmick.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\Geddy\Projects\CubeGimmick\CubeGimmick\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\Geddy\Projects\CubeGimmick\CubeGimmick\bin\Debug\DisplaySide.xbf">
+      <PackagePath>DisplaySide.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\Geddy\Projects\CubeGimmick\CubeGimmick\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\Geddy\Projects\CubeGimmick\CubeGimmick\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

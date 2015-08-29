@@ -1,0 +1,17 @@
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\bin\Debug\MetaWear.Windows.API.dll
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\bin\Debug\MetaWear.Windows.API.pdb
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\bin\Debug\MetaWear.Windows.API.pri
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\MetaWear.Windows.API.csprojResolveAssemblyReference.cache
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\MetaWear.Windows.API.dll
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\MetaWear.Windows.API.pdb
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\priconfig.xml
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\priconfig.xml.intermediate
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\layout.resfiles
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\layout.resfiles.intermediate
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\resources.resfiles
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\resources.resfiles.intermediate
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\pri.resfiles
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\pri.resfiles.intermediate
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\qualifiers.txt
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\qualifiers.txt.intermediate
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\MultipleQualifiersPerDimensionFound.txt
