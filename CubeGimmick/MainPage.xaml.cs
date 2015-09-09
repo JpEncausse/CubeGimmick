@@ -1,25 +1,16 @@
-﻿using System;
+﻿using MetaWear.Windows.API;
+using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
-using Windows.Devices.Bluetooth.GenericAttributeProfile;
-using Windows.Devices.Enumeration;
 using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace CubeGimmick
@@ -32,8 +23,9 @@ namespace CubeGimmick
         private string _side;
         private bool _loading;
         private readonly CoreDispatcher _dispatcher;
-            
-        public ObservableCollection<DeviceInformation> Devices { get; set; }
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public List<MWBoard> Devices { get; set; }
 
         public string Side
         {
@@ -60,7 +52,7 @@ namespace CubeGimmick
         {
             Loading = true;
             Side = "Loading ...";
-            Devices = new ObservableCollection<DeviceInformation>();
+            Devices = new List<MWBoard>();
 
             if (!DesignMode.DesignModeEnabled)
             {
@@ -79,28 +71,19 @@ namespace CubeGimmick
         /// This parameter is typically used to configure the page.</param>
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-            // TODO: Prepare page for display here.
-
-            // TODO: If your application contains multiple pages, ensure that you are
-            // handling the hardware Back button by registering for the
-            // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
-            // If you are using the NavigationHelper provided by some templates,
-            // this event is handled for you.
+            
             await LoadMetaWearDevices();
-            //LoadingVisability = Visibility.Collapsed;
+           
         }
 
+        /// <summary>
+        /// Loads the meta wear devices.
+        /// </summary>
+        /// <returns></returns>
         private async Task LoadMetaWearDevices()
         {
-            var metawearUUID = new Guid("326A9000-85CB-9195-D9DD-464CFBBAE75A");
-
-            foreach (DeviceInformation di in await DeviceInformation.FindAllAsync(
-                   GattDeviceService.GetDeviceSelectorFromUuid(metawearUUID),
-                   new string[] { "System.Devices.ContainerId" }))
-
-            {
-                Devices.Add(di);
-            }
+            // Get a list of connected Metawear boards
+            Devices = await MWBoardService.Instance.GetConnectedMWBoards();
 
             if (Devices.Count == 0)
             {
@@ -119,7 +102,6 @@ namespace CubeGimmick
 
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             if (_dispatcher == null || _dispatcher.HasThreadAccess)

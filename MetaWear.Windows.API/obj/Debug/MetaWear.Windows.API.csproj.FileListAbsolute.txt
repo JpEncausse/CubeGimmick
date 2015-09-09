@@ -1,7 +1,6 @@
 d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\bin\Debug\MetaWear.Windows.API.dll
 d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\bin\Debug\MetaWear.Windows.API.pdb
 d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\bin\Debug\MetaWear.Windows.API.pri
-d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\MetaWear.Windows.API.csprojResolveAssemblyReference.cache
 d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\MetaWear.Windows.API.dll
 d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\MetaWear.Windows.API.pdb
 d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\obj\Debug\priconfig.xml

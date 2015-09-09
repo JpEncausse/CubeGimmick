@@ -35,3 +35,8 @@ d:\Geddy\Projects\CubeGimmick\CubeGimmick\obj\Debug\DisplaySide.g.cs
 d:\Geddy\Projects\CubeGimmick\CubeGimmick\obj\Debug\DisplaySide.xaml
 d:\Geddy\Projects\CubeGimmick\CubeGimmick\obj\Debug\DisplaySide.xbf
 d:\Geddy\Projects\CubeGimmick\CubeGimmick\bin\Debug\DisplaySide.xbf
+D:\Geddy\Projects\CubeGimmick\CubeGimmick\bin\Debug\MetaWear.Windows.API.dll
+D:\Geddy\Projects\CubeGimmick\CubeGimmick\bin\Debug\MetaWear.Windows.API.pdb
+D:\Geddy\Projects\CubeGimmick\CubeGimmick\bin\Debug\MetaWear.Windows.API.pri
+D:\Geddy\Projects\CubeGimmick\CubeGimmick\obj\Debug\CubeGimmick.csprojResolveAssemblyReference.cache
+D:\Geddy\Projects\CubeGimmick\CubeGimmick\obj\Debug\CubeGimmick.csproj.GenerateResource.Cache

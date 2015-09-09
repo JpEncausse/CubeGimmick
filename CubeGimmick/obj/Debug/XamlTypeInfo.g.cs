@@ -124,37 +124,29 @@ namespace CubeGimmick.CubeGimmick_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[14];
+            _typeNameTable = new string[10];
             _typeNameTable[0] = "CubeGimmick.DisplaySide";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "Windows.Devices.Enumeration.DeviceInformation";
+            _typeNameTable[3] = "MetaWear.Windows.API.MWBoard";
             _typeNameTable[4] = "Object";
             _typeNameTable[5] = "String";
-            _typeNameTable[6] = "Int32";
-            _typeNameTable[7] = "CubeGimmick.MainPage";
-            _typeNameTable[8] = "System.Collections.ObjectModel.ObservableCollection`1<Windows.Devices.Enumeration.DeviceInformation>";
-            _typeNameTable[9] = "System.Collections.ObjectModel.Collection`1<Windows.Devices.Enumeration.DeviceInformation>";
-            _typeNameTable[10] = "Windows.Devices.Enumeration.EnclosureLocation";
-            _typeNameTable[11] = "Boolean";
-            _typeNameTable[12] = "System.Collections.Generic.IReadOnlyDictionary`2<String, Object>";
-            _typeNameTable[13] = "Windows.UI.Xaml.Visibility";
+            _typeNameTable[6] = "CubeGimmick.MainPage";
+            _typeNameTable[7] = "System.Collections.Generic.List`1<MetaWear.Windows.API.MWBoard>";
+            _typeNameTable[8] = "Boolean";
+            _typeNameTable[9] = "Windows.UI.Xaml.Visibility";
 
-            _typeTable = new global::System.Type[14];
+            _typeTable = new global::System.Type[10];
             _typeTable[0] = typeof(global::CubeGimmick.DisplaySide);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::Windows.Devices.Enumeration.DeviceInformation);
+            _typeTable[3] = typeof(global::MetaWear.Windows.API.MWBoard);
             _typeTable[4] = typeof(global::System.Object);
             _typeTable[5] = typeof(global::System.String);
-            _typeTable[6] = typeof(global::System.Int32);
-            _typeTable[7] = typeof(global::CubeGimmick.MainPage);
-            _typeTable[8] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Windows.Devices.Enumeration.DeviceInformation>);
-            _typeTable[9] = typeof(global::System.Collections.ObjectModel.Collection<global::Windows.Devices.Enumeration.DeviceInformation>);
-            _typeTable[10] = typeof(global::Windows.Devices.Enumeration.EnclosureLocation);
-            _typeTable[11] = typeof(global::System.Boolean);
-            _typeTable[12] = typeof(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Object>);
-            _typeTable[13] = typeof(global::Windows.UI.Xaml.Visibility);
+            _typeTable[6] = typeof(global::CubeGimmick.MainPage);
+            _typeTable[7] = typeof(global::System.Collections.Generic.List<global::MetaWear.Windows.API.MWBoard>);
+            _typeTable[8] = typeof(global::System.Boolean);
+            _typeTable[9] = typeof(global::Windows.UI.Xaml.Visibility);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -190,19 +182,12 @@ namespace CubeGimmick.CubeGimmick_XamlTypeInfo
         }
 
         private object Activate_0_DisplaySide() { return new global::CubeGimmick.DisplaySide(); }
-        private object Activate_7_MainPage() { return new global::CubeGimmick.MainPage(); }
-        private object Activate_8_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Windows.Devices.Enumeration.DeviceInformation>(); }
-        private object Activate_9_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Windows.Devices.Enumeration.DeviceInformation>(); }
-        private void VectorAdd_8_ObservableCollection(object instance, object item)
+        private object Activate_6_MainPage() { return new global::CubeGimmick.MainPage(); }
+        private object Activate_7_List() { return new global::System.Collections.Generic.List<global::MetaWear.Windows.API.MWBoard>(); }
+        private void VectorAdd_7_List(object instance, object item)
         {
-            var collection = (global::System.Collections.Generic.ICollection<global::Windows.Devices.Enumeration.DeviceInformation>)instance;
-            var newItem = (global::Windows.Devices.Enumeration.DeviceInformation)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_9_Collection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Windows.Devices.Enumeration.DeviceInformation>)instance;
-            var newItem = (global::Windows.Devices.Enumeration.DeviceInformation)item;
+            var collection = (global::System.Collections.Generic.ICollection<global::MetaWear.Windows.API.MWBoard>)instance;
+            var newItem = (global::MetaWear.Windows.API.MWBoard)item;
             collection.Add(newItem);
         }
 
@@ -221,7 +206,6 @@ namespace CubeGimmick.CubeGimmick_XamlTypeInfo
                 userType.Activator = Activate_0_DisplaySide;
                 userType.AddMemberName("Device");
                 userType.AddMemberName("Side");
-                userType.AddMemberName("AccelReadValue");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -234,14 +218,10 @@ namespace CubeGimmick.CubeGimmick_XamlTypeInfo
                 xamlType = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  Windows.Devices.Enumeration.DeviceInformation
+            case 3:   //  MetaWear.Windows.API.MWBoard
                 userType = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.AddMemberName("EnclosureLocation");
-                userType.AddMemberName("Id");
-                userType.AddMemberName("IsDefault");
-                userType.AddMemberName("IsEnabled");
                 userType.AddMemberName("Name");
-                userType.AddMemberName("Properties");
+                userType.AddMemberName("NotificationsEnabled");
                 xamlType = userType;
                 break;
 
@@ -253,13 +233,9 @@ namespace CubeGimmick.CubeGimmick_XamlTypeInfo
                 xamlType = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  Int32
-                xamlType = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 7:   //  CubeGimmick.MainPage
+            case 6:   //  CubeGimmick.MainPage
                 userType = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_MainPage;
+                userType.Activator = Activate_6_MainPage;
                 userType.AddMemberName("Devices");
                 userType.AddMemberName("Side");
                 userType.AddMemberName("Loading");
@@ -268,37 +244,18 @@ namespace CubeGimmick.CubeGimmick_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 8:   //  System.Collections.ObjectModel.ObservableCollection`1<Windows.Devices.Enumeration.DeviceInformation>
-                userType = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Windows.Devices.Enumeration.DeviceInformation>"));
-                userType.CollectionAdd = VectorAdd_8_ObservableCollection;
+            case 7:   //  System.Collections.Generic.List`1<MetaWear.Windows.API.MWBoard>
+                userType = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_7_List;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 9:   //  System.Collections.ObjectModel.Collection`1<Windows.Devices.Enumeration.DeviceInformation>
-                userType = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_9_Collection;
-                userType.CollectionAdd = VectorAdd_9_Collection;
-                xamlType = userType;
-                break;
-
-            case 10:   //  Windows.Devices.Enumeration.EnclosureLocation
-                userType = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 11:   //  Boolean
+            case 8:   //  Boolean
                 xamlType = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 12:   //  System.Collections.Generic.IReadOnlyDictionary`2<String, Object>
-                userType = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 13:   //  Windows.UI.Xaml.Visibility
+            case 9:   //  Windows.UI.Xaml.Visibility
                 xamlType = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -314,7 +271,7 @@ namespace CubeGimmick.CubeGimmick_XamlTypeInfo
         private void set_0_DisplaySide_Device(object instance, object Value)
         {
             var that = (global::CubeGimmick.DisplaySide)instance;
-            that.Device = (global::Windows.Devices.Enumeration.DeviceInformation)Value;
+            that.Device = (global::MetaWear.Windows.API.MWBoard)Value;
         }
         private object get_1_DisplaySide_Side(object instance)
         {
@@ -326,82 +283,57 @@ namespace CubeGimmick.CubeGimmick_XamlTypeInfo
             var that = (global::CubeGimmick.DisplaySide)instance;
             that.Side = (global::System.String)Value;
         }
-        private object get_2_DisplaySide_AccelReadValue(object instance)
-        {
-            var that = (global::CubeGimmick.DisplaySide)instance;
-            return that.AccelReadValue;
-        }
-        private void set_2_DisplaySide_AccelReadValue(object instance, object Value)
-        {
-            var that = (global::CubeGimmick.DisplaySide)instance;
-            that.AccelReadValue = (global::System.Int32)Value;
-        }
-        private object get_3_MainPage_Devices(object instance)
+        private object get_2_MainPage_Devices(object instance)
         {
             var that = (global::CubeGimmick.MainPage)instance;
             return that.Devices;
         }
-        private void set_3_MainPage_Devices(object instance, object Value)
+        private void set_2_MainPage_Devices(object instance, object Value)
         {
             var that = (global::CubeGimmick.MainPage)instance;
-            that.Devices = (global::System.Collections.ObjectModel.ObservableCollection<global::Windows.Devices.Enumeration.DeviceInformation>)Value;
+            that.Devices = (global::System.Collections.Generic.List<global::MetaWear.Windows.API.MWBoard>)Value;
         }
-        private object get_4_DeviceInformation_EnclosureLocation(object instance)
+        private object get_3_MWBoard_Name(object instance)
         {
-            var that = (global::Windows.Devices.Enumeration.DeviceInformation)instance;
-            return that.EnclosureLocation;
-        }
-        private object get_5_DeviceInformation_Id(object instance)
-        {
-            var that = (global::Windows.Devices.Enumeration.DeviceInformation)instance;
-            return that.Id;
-        }
-        private object get_6_DeviceInformation_IsDefault(object instance)
-        {
-            var that = (global::Windows.Devices.Enumeration.DeviceInformation)instance;
-            return that.IsDefault;
-        }
-        private object get_7_DeviceInformation_IsEnabled(object instance)
-        {
-            var that = (global::Windows.Devices.Enumeration.DeviceInformation)instance;
-            return that.IsEnabled;
-        }
-        private object get_8_DeviceInformation_Name(object instance)
-        {
-            var that = (global::Windows.Devices.Enumeration.DeviceInformation)instance;
+            var that = (global::MetaWear.Windows.API.MWBoard)instance;
             return that.Name;
         }
-        private object get_9_DeviceInformation_Properties(object instance)
+        private void set_3_MWBoard_Name(object instance, object Value)
         {
-            var that = (global::Windows.Devices.Enumeration.DeviceInformation)instance;
-            return that.Properties;
+            var that = (global::MetaWear.Windows.API.MWBoard)instance;
+            that.Name = (global::System.String)Value;
         }
-        private object get_10_MainPage_Side(object instance)
+        private object get_4_MWBoard_NotificationsEnabled(object instance)
+        {
+            var that = (global::MetaWear.Windows.API.MWBoard)instance;
+            return that.NotificationsEnabled;
+        }
+        private object get_5_MainPage_Side(object instance)
         {
             var that = (global::CubeGimmick.MainPage)instance;
             return that.Side;
         }
-        private void set_10_MainPage_Side(object instance, object Value)
+        private void set_5_MainPage_Side(object instance, object Value)
         {
             var that = (global::CubeGimmick.MainPage)instance;
             that.Side = (global::System.String)Value;
         }
-        private object get_11_MainPage_Loading(object instance)
+        private object get_6_MainPage_Loading(object instance)
         {
             var that = (global::CubeGimmick.MainPage)instance;
             return that.Loading;
         }
-        private void set_11_MainPage_Loading(object instance, object Value)
+        private void set_6_MainPage_Loading(object instance, object Value)
         {
             var that = (global::CubeGimmick.MainPage)instance;
             that.Loading = (global::System.Boolean)Value;
         }
-        private object get_12_MainPage_LoadingVisability(object instance)
+        private object get_7_MainPage_LoadingVisability(object instance)
         {
             var that = (global::CubeGimmick.MainPage)instance;
             return that.LoadingVisability;
         }
-        private void set_12_MainPage_LoadingVisability(object instance, object Value)
+        private void set_7_MainPage_LoadingVisability(object instance, object Value)
         {
             var that = (global::CubeGimmick.MainPage)instance;
             that.LoadingVisability = (global::Windows.UI.Xaml.Visibility)Value;
@@ -416,7 +348,7 @@ namespace CubeGimmick.CubeGimmick_XamlTypeInfo
             {
             case "CubeGimmick.DisplaySide.Device":
                 userType = (global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CubeGimmick.DisplaySide");
-                xamlMember = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlMember(this, "Device", "Windows.Devices.Enumeration.DeviceInformation");
+                xamlMember = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlMember(this, "Device", "MetaWear.Windows.API.MWBoard");
                 xamlMember.Getter = get_0_DisplaySide_Device;
                 xamlMember.Setter = set_0_DisplaySide_Device;
                 break;
@@ -426,71 +358,41 @@ namespace CubeGimmick.CubeGimmick_XamlTypeInfo
                 xamlMember.Getter = get_1_DisplaySide_Side;
                 xamlMember.Setter = set_1_DisplaySide_Side;
                 break;
-            case "CubeGimmick.DisplaySide.AccelReadValue":
-                userType = (global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CubeGimmick.DisplaySide");
-                xamlMember = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlMember(this, "AccelReadValue", "Int32");
-                xamlMember.Getter = get_2_DisplaySide_AccelReadValue;
-                xamlMember.Setter = set_2_DisplaySide_AccelReadValue;
-                break;
             case "CubeGimmick.MainPage.Devices":
                 userType = (global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CubeGimmick.MainPage");
-                xamlMember = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlMember(this, "Devices", "System.Collections.ObjectModel.ObservableCollection`1<Windows.Devices.Enumeration.DeviceInformation>");
-                xamlMember.Getter = get_3_MainPage_Devices;
-                xamlMember.Setter = set_3_MainPage_Devices;
+                xamlMember = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlMember(this, "Devices", "System.Collections.Generic.List`1<MetaWear.Windows.API.MWBoard>");
+                xamlMember.Getter = get_2_MainPage_Devices;
+                xamlMember.Setter = set_2_MainPage_Devices;
                 break;
-            case "Windows.Devices.Enumeration.DeviceInformation.EnclosureLocation":
-                userType = (global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.Enumeration.DeviceInformation");
-                xamlMember = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlMember(this, "EnclosureLocation", "Windows.Devices.Enumeration.EnclosureLocation");
-                xamlMember.Getter = get_4_DeviceInformation_EnclosureLocation;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Windows.Devices.Enumeration.DeviceInformation.Id":
-                userType = (global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.Enumeration.DeviceInformation");
-                xamlMember = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlMember(this, "Id", "String");
-                xamlMember.Getter = get_5_DeviceInformation_Id;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Windows.Devices.Enumeration.DeviceInformation.IsDefault":
-                userType = (global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.Enumeration.DeviceInformation");
-                xamlMember = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlMember(this, "IsDefault", "Boolean");
-                xamlMember.Getter = get_6_DeviceInformation_IsDefault;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Windows.Devices.Enumeration.DeviceInformation.IsEnabled":
-                userType = (global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.Enumeration.DeviceInformation");
-                xamlMember = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlMember(this, "IsEnabled", "Boolean");
-                xamlMember.Getter = get_7_DeviceInformation_IsEnabled;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Windows.Devices.Enumeration.DeviceInformation.Name":
-                userType = (global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.Enumeration.DeviceInformation");
+            case "MetaWear.Windows.API.MWBoard.Name":
+                userType = (global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MetaWear.Windows.API.MWBoard");
                 xamlMember = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlMember(this, "Name", "String");
-                xamlMember.Getter = get_8_DeviceInformation_Name;
-                xamlMember.SetIsReadOnly();
+                xamlMember.Getter = get_3_MWBoard_Name;
+                xamlMember.Setter = set_3_MWBoard_Name;
                 break;
-            case "Windows.Devices.Enumeration.DeviceInformation.Properties":
-                userType = (global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.Enumeration.DeviceInformation");
-                xamlMember = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlMember(this, "Properties", "System.Collections.Generic.IReadOnlyDictionary`2<String, Object>");
-                xamlMember.Getter = get_9_DeviceInformation_Properties;
+            case "MetaWear.Windows.API.MWBoard.NotificationsEnabled":
+                userType = (global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MetaWear.Windows.API.MWBoard");
+                xamlMember = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlMember(this, "NotificationsEnabled", "Boolean");
+                xamlMember.Getter = get_4_MWBoard_NotificationsEnabled;
                 xamlMember.SetIsReadOnly();
                 break;
             case "CubeGimmick.MainPage.Side":
                 userType = (global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CubeGimmick.MainPage");
                 xamlMember = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlMember(this, "Side", "String");
-                xamlMember.Getter = get_10_MainPage_Side;
-                xamlMember.Setter = set_10_MainPage_Side;
+                xamlMember.Getter = get_5_MainPage_Side;
+                xamlMember.Setter = set_5_MainPage_Side;
                 break;
             case "CubeGimmick.MainPage.Loading":
                 userType = (global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CubeGimmick.MainPage");
                 xamlMember = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlMember(this, "Loading", "Boolean");
-                xamlMember.Getter = get_11_MainPage_Loading;
-                xamlMember.Setter = set_11_MainPage_Loading;
+                xamlMember.Getter = get_6_MainPage_Loading;
+                xamlMember.Setter = set_6_MainPage_Loading;
                 break;
             case "CubeGimmick.MainPage.LoadingVisability":
                 userType = (global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CubeGimmick.MainPage");
                 xamlMember = new global::CubeGimmick.CubeGimmick_XamlTypeInfo.XamlMember(this, "LoadingVisability", "Windows.UI.Xaml.Visibility");
-                xamlMember.Getter = get_12_MainPage_LoadingVisability;
-                xamlMember.Setter = set_12_MainPage_LoadingVisability;
+                xamlMember.Getter = get_7_MainPage_LoadingVisability;
+                xamlMember.Setter = set_7_MainPage_LoadingVisability;
                 break;
             }
             return xamlMember;

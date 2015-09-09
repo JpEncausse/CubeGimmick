@@ -21,6 +21,9 @@
     <AppxPackagedFile Include="d:\Geddy\Projects\CubeGimmick\CubeGimmick\bin\Debug\CubeGimmick.exe">
       <PackagePath>CubeGimmick.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\bin\Debug\MetaWear.Windows.API.dll">
+      <PackagePath>MetaWear.Windows.API.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="d:\Geddy\Projects\CubeGimmick\CubeGimmick\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>

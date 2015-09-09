@@ -80,6 +80,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\MetaWear.Windows.API\MetaWear.Windows.API.csproj">
+      <Project>{3a6b7ef1-22b0-4214-8a5c-851c639501b8}</Project>
+      <Name>MetaWear.Windows.API</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">

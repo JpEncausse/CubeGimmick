@@ -1,1 +1,2 @@
 d:\Geddy\Projects\CubeGimmick\CubeGimmick\CubeGimmick.csproj;neutral
+d:\Geddy\Projects\CubeGimmick\MetaWear.Windows.API\MetaWear.Windows.API.csproj;neutral
